@@ -25,7 +25,8 @@ int main()
         pb_ostream_t stream = pb_ostream_from_buffer(buffer, sizeof(buffer));
         
         /* Fill in the lucky number */
-        message.lucky_number = 13;
+        message.lucky_number = 100;
+        message.s_number = 101;
         
         /* Now we are ready to encode the message! */
         status = pb_encode(&stream, SimpleMessage_fields, &message);
